@@ -881,7 +881,7 @@ def main():
         error_msg = get_error_message(error, language) # Prepares error message for search
         if error_msg != None:
             language = 'java' if language == 'javac' else language # Fix language compiler command
-            query = "%s %s %s" % (language, error_msg)
+            query = "%s %s" % (language, error_msg)
             #search_results, captcha = search_stackoverflow(query)
             search_results = search_google(query)
 
