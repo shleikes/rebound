@@ -13,7 +13,6 @@ idna-ssl==1.1.0
 importlib-metadata==4.8.3
 lxml==4.9.2
 multidict==5.2.0
-pkg-resources==0.0.0
 requests==2.27.1
 search-engine-parser==0.6.8
 soupsieve==2.3.2.post1
