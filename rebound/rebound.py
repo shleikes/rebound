@@ -14,7 +14,7 @@ from subprocess import PIPE, Popen
 from threading import Thread
 import webbrowser
 from urwid.widget import (BOX, FLOW, FIXED)
-from search_engine_parser.core.engines.google import Search as GoogleSearch
+from search_engine_parser.core.engines.bing import Search as BingSearch
 from fake_useragent import UserAgent
 
 
@@ -299,10 +299,10 @@ def souper(url):
 def search_google(query):
     try:
       query = query+" :"+SO_URL[8:]
-      google_search = GoogleSearch()
+      bing_search = BingSearch()
       SearchArgs=(query,1)
-      google_search.clear_cache()
-      SearchDict=google_search.search(*SearchArgs)
+      bing_search.clear_cache()
+      SearchDict=bing_search.search(*SearchArgs)
     except Exception as e:
        sys.stdout.write("\n%s%s%s" % (RED,"Rebound was unable to fetch results. "
                                             +str(e)+"\n Try again Later.", END))
